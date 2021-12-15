@@ -42,7 +42,7 @@
 
 Link to Trello: 'https://trello.com/b/VtPtcM4c/sushiverse'
 
-Link to Heroku:
+Link to Heroku: Will be updated once it's deployed.
 
 ***
 
