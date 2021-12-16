@@ -6,8 +6,8 @@ const Review = new Schema(
     name: { type: String, required: true },
     comments: {type: String, required: true},
     ratings: {type: Number, required: true},
-    place_id: {type: Schema.Types.ObjectId, ref: 'places'},
-    location_id: {type: Schema.Types.ObjectId, ref: 'locations'}
+    place: {type: Schema.Types.ObjectId, ref: 'places'},
+  
   },
   { timestamps: true }
 )

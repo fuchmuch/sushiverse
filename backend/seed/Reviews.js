@@ -15,60 +15,56 @@ const main = async () => {
     const kojima = await Place.find({ name: 'Kojima' })
     const mitou = await Place.find({ name: 'Mitou' })
 
-    const newYork = await Location.find({ city:'New York'})
-    const tokyo = await Location.find({ city:'Tokyo'})
-    const seoul = await Location.find({ city:'Seoul'})
 
   const reviews = [
     {
       name: 'Ellen',
       comments: 'My best birthday dinner ever!',
       ratings: 5,
-      place_id: yoshino[0]._id,
-      location_id: newYork[0]._id,
+      place: yoshino[0]._id,
+    
     },
     {
       name: 'Angie',
       comments: 'delicious, spectacular!',
       ratings: 4,
-      place_id: sushiNoz[0]._id,
-      location_id: newYork[0]._id,
+      place: sushiNoz[0]._id,
+    
       
     },
     {
       name: 'Gihae',
       comments: 'Just a beautiful classic',
       ratings: 4,
-      place_id: sushiGinzaOnodera[0]._id,
-      location_id: newYork[0]._id,
+      place: sushiGinzaOnodera[0]._id,
+    
     },
     {
         name: 'Kei',
         comments: 'Authentic, deep taste',
         ratings: 4,
-        place_id: amamoto[0]._id,
-        location_id: tokyo[0]._id,
+        place: amamoto[0]._id,
+        
       },
       {
         name: 'Josh',
         comments: 'Fabulous, It was worth it to wait a year',
         ratings: 5,
-        place_id: sukiyabashiJiro[0]._id,
-        location_id: tokyo[0]._id,
+        place: sukiyabashiJiro[0]._id,
+       
       },
       {
         name: 'Leila',
         comments: 'deilicous but pricy',
         ratings: 3,
-        place_id: kojima[0]._id,
-        location_id: seoul[0]._id,
+        place: kojima[0]._id,
+       
       },
       {
         name: 'Jess',
         comments: 'pretty, delicious.. Chefs were so nice!',
         ratings: 5,
-        place_id: mitou[0]._id,
-        location_id: seoul[0]._id,
+        place: mitou[0]._id,
       },
 
 
