@@ -12,7 +12,7 @@
 
 ### ***Screenshots***
 
-![Alt Text](https://64.media.tumblr.com/e8d47c7e65aa63a84193207bb0856990/tumblr_otsk06Kmdi1s5laego7_1280.jpg)
+![Alt Text](https://i.imgur.com/qnen2dK.jpg)
 
 (As a reference of a sushi web)
 
