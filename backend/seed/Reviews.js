@@ -10,6 +10,8 @@ const main = async () => {
     const yoshino = await Place.find({ name: 'Yoshino' })
     const sushiNoz= await Place.find({ name: 'Sushi Noz' })
     const sushiGinzaOnodera = await Place.find({ name: 'Sushi Ginza Onodera' })
+    const noda = await Place.find({ name: 'Noda' })
+    const uogashi = await Place.find({ name: 'Uogashi' })
     const amamoto= await Place.find({ name: 'Amamoto' })
     const sukiyabashiJiro = await Place.find({ name: 'Sukiyabashi Jiro' })
     const kojima = await Place.find({ name: 'Kojima' })
@@ -39,6 +41,20 @@ const main = async () => {
       place: sushiGinzaOnodera[0]._id,
     
     },
+    {
+        name: 'Justin',
+        comments: 'Better than michelin star omakase places',
+        ratings: 5,
+        place: uogashi[0]._id,
+      
+      },
+      {
+        name: 'Alvin',
+        comments: 'My best birthday dinner ever!',
+        ratings: 5,
+        place: noda[0]._id,
+      
+      },
     {
         name: 'Kei',
         comments: 'Authentic, deep taste',
