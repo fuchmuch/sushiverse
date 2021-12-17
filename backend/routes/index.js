@@ -16,6 +16,12 @@ router.get('/places', controllers.getAllPlaces);
 
 router.get('/reviews', controllers.getAllReviews);
 
+router.get('/locations/:_id', controllers.getLocationById);
+
+router.get('/places/:_id', controllers.getPlaceById);
+
+router.get('/reviews/:_id', controllers.getReviewById);
+
 router.put('/locations/:_id', controllers.updateLocation);
 
 router.put('/places/:_id', controllers.updatePlace);

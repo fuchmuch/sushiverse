@@ -3,6 +3,10 @@ const routes = require('./routes');
 const db = require('./db');
 const cors = require('cors')
 const logger = require('morgan');
+const { Mongoose } = require('mongoose');
+const path = require('path')
+const place = require('./models/place')
+
 
 const PORT = process.env.PORT || 3001;
 
