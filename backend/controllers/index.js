@@ -71,9 +71,9 @@ const createLocations = async (req, res) => {
   const getLocationById = async (req, res) => {
     try {
       const { _id } = req.params;
-      const review = await Review.findById(_id);
-      if (review) {
-        return res.status(200).json({ review });
+      const location = await Location.findById(_id);
+      if (location) {
+        return res.status(200).json({ location });
       }
       return res.status(404).send(`Location with the specified ID does not exists`);
     } catch (error) {
@@ -83,10 +83,10 @@ const createLocations = async (req, res) => {
 
   const getPlaceById = async (req, res) => {
     try {
-      const { _id } = req.params;
-      const review = await Review.findById(_id);
-      if (review) {
-        return res.status(200).json({ review });
+      const { id } = req.params;
+      const place = await Place.findById(id);
+      if (place) {
+        return res.status(200).json({ place});
       }
       return res.status(404).send(`Place with the specified ID does not exists`);
     } catch (error) {

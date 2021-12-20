@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import ReviewCard from '../components/ReviewCard';
 import SubmitReview from '../components/SubmitReview';
+import {useParams} from 'react-router-dom';
 
 export default function PlaceDetails(props) {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
 
+  let {id} = useParams()
+  console.log(id);
+
   const getPlace = async () => {
+    console.log('this is get place function' )
     const res = await axios.get(
-      `http://localhost:3001/api/places/details/${props.match.params._id}`
+      `http://localhost:3001/api/places/${id}`
     );
     setSelectedPlace(res.data.place);
   };
@@ -31,8 +36,8 @@ export default function PlaceDetails(props) {
         <img src={selectedPlace.url} />
         <p>{selectedPlace.description}</p>
       </section>
-      <SubmitReview {...props} />
-      {reviews.map((review) => {
+      {/* <SubmitReview {...props} /> */}
+      {/* {reviews.map((review) => {
         if (review.place_id === props.match.params.placeId) {
           return (
             <ReviewCard
@@ -44,7 +49,7 @@ export default function PlaceDetails(props) {
         } else {
           console.log('review doesnt match this place');
         }
-      })}
+      })} */}
     </div>
   ) : null;
 }

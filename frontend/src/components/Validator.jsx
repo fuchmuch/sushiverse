@@ -21,7 +21,7 @@ const history= useHistory();
   e.preventDefault()
   if (username && email && (password === passwordConfirm)){
    setValid (true) 
-   history.push('/')
+   history.push('/home')
   } else {  setValid (false)
   } 
 }
