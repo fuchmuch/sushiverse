@@ -30,6 +30,14 @@ export default function Home(props) {
   
 //add validator function 
 //false to true 
+function validator () {
+    if (<Validator/>===true ){
+        return true;
+    } else {
+        return false;
+    }
+    
+}
 
 
 return (
@@ -43,10 +51,10 @@ return (
       {locations.map((location) => {
           {
             return (
-              <LocationCard
+              <PlaceCard
                 onClick={() => history.push(`/locations/details/${location._id}`)}
-                city={location.city}
-                country={location.country}
+                name={location.name}
+                image={location.url}
               />
             );
           }

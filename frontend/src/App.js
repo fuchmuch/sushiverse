@@ -1,24 +1,19 @@
 import React, { useEffect, useState }from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import Validator from "./pages/validator";
-import Nav from './components/Nav';
+import './styles/app.css';
 import PlaceDetails from './pages/PlaceDetails';
+import GoogleMap from './components/GoogleMap' 
+import Home from './pages/Home'
+import Nav from './components/Nav';
+import PlaceCard from './components/List/PlaceCard';
 
 function App() {
   return (
     <div className="App">
-      <header>
-      <Validator/>
-      </header>
-      <Nav/>
-      <Route exact path="/" component={(props) => <Home {...props} />} />
-        <Route
-          path="/places/details/:place"
-          render={(props) => <PlaceDetails {...props} />}
-        />
-        <Route exact path="/about" component={About} />
-      <Switch/>
+    <Home/>
+    <Nav />
+    <PlaceCard/>
+    <GoogleMap />
     </div>
   );
 }

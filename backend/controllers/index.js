@@ -1,5 +1,4 @@
 const Location = require('../models/location');
-const place = require('../models/place');
 const Place = require('../models/place');
 const Review = require('../models/review');
 
@@ -43,7 +42,7 @@ const createLocations = async (req, res) => {
   const getAllLocations = async (req, res) => {
     try {
       const locations = await Location.find();
-      return res.status(200).json({locations });
+      return res.status(200).json({locations});
     } catch (error) {
       return res.status(500).send(error.message);
     }
