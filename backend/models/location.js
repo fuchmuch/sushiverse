@@ -4,10 +4,10 @@ const Schema = mongoose.Schema
 
 const Location = new Schema(
   {
-    // url: { type: String, required: true },
     city: { type: String, required: true },
     country: {type: String, required: true},
-    // age_requirement: {type: Boolean, required: true},
+    url: { type: String, required: true } ,
+
   },
   { timestamps: true }
 )

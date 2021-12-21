@@ -70,8 +70,8 @@ const createLocations = async (req, res) => {
 
   const getLocationById = async (req, res) => {
     try {
-      const { _id } = req.params;
-      const location = await Location.findById(_id);
+      const { id } = req.params;
+      const location = await Location.findById(id);
       if (location) {
         return res.status(200).json({ location });
       }
@@ -96,8 +96,8 @@ const createLocations = async (req, res) => {
 
   const getReviewById = async (req, res) => {
     try {
-      const { _id } = req.params;
-      const review = await Review.findById(_id);
+      const { id } = req.params;
+      const review = await Review.findById(id);
       if (review) {
         return res.status(200).json({ review });
       }
@@ -109,8 +109,8 @@ const createLocations = async (req, res) => {
   
   const deleteLocation = async (req, res) => {
     try {
-        const { _id } = req.params;
-        const deleted = await Ride.findByIdAndDelete(_id)
+        const { id } = req.params;
+        const deleted = await Ride.findByIdAndDelete(id)
         if (deleted) {
             return res.status(200).send("Location deleted");
         }
@@ -122,8 +122,8 @@ const createLocations = async (req, res) => {
 
   const updateLocation = async (req, res) => {
     try {
-        const { _id } = req.params;
-        await Location.findByIdAndUpdate( _id, req.body, { new: true }, (err, location) => {
+        const { id } = req.params;
+        await Location.findByIdAndUpdate( id, req.body, { new: true }, (err, location) => {
             if (err) {
                 res.status(500).send(err);
             }
@@ -139,8 +139,8 @@ const createLocations = async (req, res) => {
 
 const updatePlace = async (req, res) => {
     try {
-        const { _id } = req.params;
-        await Location.findByIdAndUpdate( _id, req.body, { new: true }, (err, place) => {
+        const { id } = req.params;
+        await Location.findByIdAndUpdate( id, req.body, { new: true }, (err, place) => {
             if (err) {
                 res.status(500).send(err);
             }
@@ -156,8 +156,8 @@ const updatePlace = async (req, res) => {
 
 const updateReview = async (req, res) => {
     try {
-        const { _id } = req.params;
-        await Location.findByIdAndUpdate( _id, req.body, { new: true }, (err, review) => {
+        const { id } = req.params;
+        await Location.findByIdAndUpdate( id, req.body, { new: true }, (err, review) => {
             if (err) {
                 res.status(500).send(err);
             }
@@ -175,8 +175,8 @@ const updateReview = async (req, res) => {
 
   const deletePlace = async (req, res) => {
     try {
-        const { _id } = req.params;
-        const deleted = await Ride.findByIdAndDelete(_id)
+        const { id } = req.params;
+        const deleted = await Ride.findByIdAndDelete(id)
         if (deleted) {
             return res.status(200).send("Place deleted");
         }
@@ -188,8 +188,8 @@ const updateReview = async (req, res) => {
 
   const deleteReview = async (req, res) => {
     try {
-        const { _id } = req.params;
-        const deleted = await Review.findByIdAndDelete(_id)
+        const { id } = req.params;
+        const deleted = await Review.findByIdAndDelete(id)
         if (deleted) {
             return res.status(200).send("Review deleted");
         }

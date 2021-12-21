@@ -1,43 +1,64 @@
-.App {
+
+img {
+  height: 300 px;
+  width: 450px;
+ 
+}
+
+.place-info{
+  font-size: 20px;
+  font-family: 'Open Sans';
+  padding-right: 50px;
+  float: right
+}
+
+.calendar{
+  float:left;
+}
+
+.reviewSection{
+  padding-bottom: 100px;
+
+}
+
+
+.bodypart{
+  color: black;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.places-Section{
+ display: flex;
+ flex-flow: row wrap;
+ align-items: center;
+ justify-content: top;
+ padding-left: 180px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background-color: #ffffffe0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: xx-large;
+  text-align: end;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(5, 5, 5);
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  background-color: #26a01b;
+  border: 2px solid white;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-img {
-  height: 200px;
-  width: 300px;
+.button:hover {
+  background-color: darkslateblue;
+  text-shadow: 1px 1px 2px white;
 }

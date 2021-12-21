@@ -1,6 +1,5 @@
 const db = require('../db');
 const Place = require('../models/place');
-const Location = require('../models/location')
 const Review = require('../models/review');
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -12,7 +11,7 @@ const main = async () => {
     const sushiGinzaOnodera = await Place.find({ name: 'Sushi Ginza Onodera' })
     const noda = await Place.find({ name: 'Noda' })
     const uogashi = await Place.find({ name: 'Uogashi' })
-    const amamoto= await Place.find({ name: 'Amamoto' })
+    const higashiazabuAmamoto = await Place.find({ name: 'Higashiazabu Amamoto' })
     const sukiyabashiJiro = await Place.find({ name: 'Sukiyabashi Jiro' })
     const kojima = await Place.find({ name: 'Kojima' })
     const mitou = await Place.find({ name: 'Mitou' })
@@ -23,14 +22,14 @@ const main = async () => {
       name: 'Ellen',
       comments: 'My best birthday dinner ever!',
       ratings: 5,
-      place: yoshino[0]._id,
+      place: yoshino[0].id,
     
     },
     {
       name: 'Angie',
       comments: 'delicious, spectacular!',
       ratings: 4,
-      place: sushiNoz[0]._id,
+      place: sushiNoz[0].id,
     
       
     },
@@ -38,49 +37,49 @@ const main = async () => {
       name: 'Gihae',
       comments: 'Just a beautiful classic',
       ratings: 4,
-      place: sushiGinzaOnodera[0]._id,
+      place: sushiGinzaOnodera[0].id,
     
     },
     {
         name: 'Justin',
         comments: 'Better than michelin star omakase places',
         ratings: 5,
-        place: uogashi[0]._id,
+        place: uogashi[0].id,
       
       },
       {
         name: 'Alvin',
         comments: 'My best birthday dinner ever!',
         ratings: 5,
-        place: noda[0]._id,
+        place: noda[0].id,
       
       },
     {
         name: 'Kei',
         comments: 'Authentic, deep taste',
         ratings: 4,
-        place: amamoto[0]._id,
+        place: higashiazabuAmamoto[0].id,
         
       },
       {
         name: 'Josh',
         comments: 'Fabulous, It was worth it to wait a year',
         ratings: 5,
-        place: sukiyabashiJiro[0]._id,
+        place: sukiyabashiJiro[0].id,
        
       },
       {
         name: 'Leila',
         comments: 'deilicous but pricy',
         ratings: 3,
-        place: kojima[0]._id,
+        place: kojima[0].id,
        
       },
       {
         name: 'Jess',
         comments: 'pretty, delicious.. Chefs were so nice!',
         ratings: 5,
-        place: mitou[0]._id,
+        place: mitou[0].id,
       },
 
 

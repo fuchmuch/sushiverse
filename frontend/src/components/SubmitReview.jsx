@@ -6,7 +6,7 @@ function SubmitReview(props) {
         name:``,
         comments:``,
         ratings:``,
-        place_id: props.match.params.placeId
+        place: props.id
     })
     const submit = (e) => {
         e.preventDefault();
@@ -14,7 +14,7 @@ function SubmitReview(props) {
             name: newReview.name,
             comments: newReview.comments,
             ratings: newReview.ratings,
-            place_id: newReview.place_id
+            place: newReview.id
         })
         let anotherReview = {
             name:``,
@@ -31,7 +31,7 @@ function SubmitReview(props) {
     }
     
     return (
-        <div>
+        <div className = "reviewSection">
             <h1>Add A Review</h1>
             <form onSubmit={(e) => submit(e)}>
                 Name: <input type='text'
@@ -48,7 +48,7 @@ function SubmitReview(props) {
                     type='text'
                     id='comments'
                 /> <br/> <br/>
-                Rating from 1-5: <input type='text'
+                Rating 1 to 5: <input type='text'
                     name='ratings'
                     value={newReview.ratings}
                     onChange={(e) => handle(e)}

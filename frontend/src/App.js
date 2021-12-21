@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Nav from './components/Nav';
 import PlaceCard from './components/List/PlaceCard';
 import Validator from './components/Validator';
+import SubmitReview from './components/SubmitReview';
 
 function App() {
   return (
@@ -24,11 +25,12 @@ function App() {
             path="/home"
             component={() => <Home />}
           />
+
+          
           <Route
             path="/places/details/:id"
             component={() => <PlaceDetails />}
           />
-
 
         </Switch>
       </main>

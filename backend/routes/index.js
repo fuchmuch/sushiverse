@@ -16,21 +16,21 @@ router.get('/places', controllers.getAllPlaces);
 
 router.get('/reviews', controllers.getAllReviews);
 
-router.get('/locations/:_id', controllers.getLocationById);
+router.get('/locations/:id', controllers.getLocationById);
 
 router.get('/places/:id', controllers.getPlaceById);
 
-router.get('/reviews/:_id', controllers.getReviewById);
+router.get('/reviews/:id', controllers.getReviewById);
 
-router.put('/locations/:_id', controllers.updateLocation);
+router.put('/locations/:id', controllers.updateLocation);
 
-router.put('/places/:_id', controllers.updatePlace);
+router.put('/places/:id', controllers.updatePlace);
 
-router.put('/reviews/:_id', controllers.updateReview);
+router.put('/reviews/:id', controllers.updateReview);
 
-router.delete('/places/details/:_id', controllers.deletePlace);
+router.delete('/places/details/:id', controllers.deletePlace);
 
-router.delete('/reviews/details/:_id', controllers.deleteReview);
+router.delete('/reviews/details/:id', controllers.deleteReview);
 
 
 

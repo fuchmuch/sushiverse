@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-// import ReviewCard from '../components/ReviewCard';
 import SubmitReview from '../components/SubmitReview';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import ReviewCard from '../components/List/ReviewCard';
+import Booking from '../components/Booking'
 
 export default function PlaceDetails(props) {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
 
-  let {id} = useParams()
+  let { id } = useParams()
   console.log(id);
 
   const getPlace = async () => {
-    console.log('this is get place function' )
+    console.log('this is get place function')
     const res = await axios.get(
       `http://localhost:3001/api/places/${id}`
     );
@@ -31,14 +32,21 @@ export default function PlaceDetails(props) {
 
   return selectedPlace ? (
     <div>
+      <section className='Calendar'>
+        <Booking />
+      </section>
       <section className="place-info">
         <h1>{selectedPlace.name}</h1>
         <img src={selectedPlace.url} />
+        <p>{selectedPlace.michelin_awardWinning}</p>
+        <p>{selectedPlace.price}</p>
+        <p>{selectedPlace.address}</p>
         <p>{selectedPlace.description}</p>
       </section>
-      {/* <SubmitReview {...props} /> */}
-      {/* {reviews.map((review) => {
-        if (review.place_id === props.match.params.placeId) {
+      
+      <SubmitReview {...props} id={id} />
+      {reviews.map((review) => {
+        if (review.id === id) {
           return (
             <ReviewCard
               name={review.name}
@@ -49,7 +57,7 @@ export default function PlaceDetails(props) {
         } else {
           console.log('review doesnt match this place');
         }
-      })} */}
+      })}
     </div>
   ) : null;
 }

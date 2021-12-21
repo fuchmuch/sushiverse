@@ -49,9 +49,9 @@ const handleChange= (e) => {
   return (
     <div className="form">
       <h1>Sign Up</h1>
-
+      <div className="login_logo">
       <img src= {"https://i.imgur.com/61gAr4u.jpg"} alt="logo"/> 
-
+      </div>
       <h3>Please create an account to continue.</h3>
       <h4>Let’s get some basic information so that restaurants know who you are.</h4> 
       <form>

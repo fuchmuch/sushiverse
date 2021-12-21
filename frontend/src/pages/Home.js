@@ -28,16 +28,16 @@ export default function Home(props) {
     };
 
 
-    //add validator function 
-    //false to true 
-
 
     return (
-        <div>
+      <div className='bodypart'>
             {/* {isLoggedIn ?  */}
 
-            <div>
-                <h1>SUSHIVERSE</h1>
+            
+                <div className='bodytitle'>
+                <h1>ALL RESTAURANTS</h1>
+                </div>
+                
 
                 {/* <section className="locations-Section">
       {locations.map((location) => {
@@ -65,10 +65,10 @@ export default function Home(props) {
                         }
                     })}
                 </section>
-            </div>
-            {/* : <Validator/> 
-    } */}
-        </div>
+                </div>
+    //         : <Validator/> 
+    // } 
+       
     )
 
 }
