@@ -1,17 +1,18 @@
 import React from 'react';
 
-const Search = (props) => {
+const SearchResults= (props) => {
 
     return (
+        <div className= 'filter'>
         <form onSubmit={props.onSubmit}>
         <input type = "text" name= "search" 
         value= {props.value} 
-        placeholder "Search Restaurants"
-        onChange = {props.onChange} 
-        ></input>
+        placeholder = "Search Restaurants"
+        onChange = {props.onChange}></input>
         <button type = "submit">Search</button>
         </form >
+        </div>
     )
 }
 
-export default Search
+export default SearchResults

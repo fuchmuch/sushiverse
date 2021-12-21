@@ -140,7 +140,7 @@ const createLocations = async (req, res) => {
 const updatePlace = async (req, res) => {
     try {
         const { id } = req.params;
-        await Location.findByIdAndUpdate( id, req.body, { new: true }, (err, place) => {
+        await Place.findByIdAndUpdate( id, req.body, { new: true }, (err, place) => {
             if (err) {
                 res.status(500).send(err);
             }
@@ -157,7 +157,7 @@ const updatePlace = async (req, res) => {
 const updateReview = async (req, res) => {
     try {
         const { id } = req.params;
-        await Location.findByIdAndUpdate( id, req.body, { new: true }, (err, review) => {
+        await Review.findByIdAndUpdate( id, req.body, { new: true }, (err, review) => {
             if (err) {
                 res.status(500).send(err);
             }

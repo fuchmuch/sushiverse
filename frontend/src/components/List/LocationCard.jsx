@@ -8,6 +8,7 @@ export default function LocationCard(props) {
       <section className="location-info">
         <h1>{props.city}</h1>
        <h1>{props.country} </h1>
+       <img src={props.image} />
       </section>
     </div>
   )

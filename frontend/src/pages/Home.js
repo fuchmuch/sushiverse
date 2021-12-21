@@ -44,9 +44,10 @@ export default function Home(props) {
           {
             return (
               <LocationCard
-                onClick={() => history.push(`/locations/details/${location._id}`)}
+                onClick={() => history.push(`/locations/${location._id}`)}
                 city={location.city}
                 country={location.country}
+                img={location.url}
               />
             );
           }

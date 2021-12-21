@@ -32,7 +32,7 @@ function SubmitReview(props) {
     
     return (
         <div className = "reviewSection">
-            <h1>Add A Review</h1>
+            <h1>Review</h1>
             <form onSubmit={(e) => submit(e)}>
                 Name: <input type='text'
                     name='name'

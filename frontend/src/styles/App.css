@@ -5,11 +5,14 @@ img {
  
 }
 
-.place-info{
+.place-info img, p{
+  display: flex;
+  flex-flow: row wrap;
   font-size: 20px;
   font-family: 'Open Sans';
   padding-right: 50px;
-  float: right
+  float: center;
+ justify-content:left;
 }
 
 .calendar{

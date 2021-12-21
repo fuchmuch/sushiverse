@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import PlaceCard from './components/List/PlaceCard';
 import Validator from './components/Validator';
 import SubmitReview from './components/SubmitReview';
+import LocationCard from './components/List/LocationCard';
 
 function App() {
   return (
