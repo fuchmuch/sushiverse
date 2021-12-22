@@ -9,7 +9,7 @@ const SearchResults= (props) => {
         value= {props.value} 
         placeholder = "Search Restaurants"
         onChange = {props.onChange}></input>
-        <button type = "submit">Search</button>
+        {/* <button type = "submit">Search</button> */}
         </form >
         </div>
     )

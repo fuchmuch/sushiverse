@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import ReviewCard from '../components/List/ReviewCard';
 import Booking from '../components/Booking'
 
+
 export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);

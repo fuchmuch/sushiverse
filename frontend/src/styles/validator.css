@@ -43,8 +43,8 @@ form{
 
 
 h3{
-    margin-bottom: 5px; 
-    margin-top: -70px;
+justify-content: center;
+padding-left: 100px;
 }
 
 input {
@@ -153,6 +153,5 @@ form ~ .valid {
     width: 150px;
     padding-bottom: 50px;
     justify-content: center;
-    padding-left: 120px;
-  
+  align-self: center;
   }

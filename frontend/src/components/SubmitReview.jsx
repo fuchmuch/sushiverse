@@ -45,7 +45,7 @@ function SubmitReview(props) {
     
 </div>
             <h1 className='reviewtitle'>Review</h1>
-            <form onSubmit={(e) => submit(e)}>
+            <form className='submitform' onSubmit={(e) => submit(e)}>
                 Name: <input type='text'
                     name='name'
                     value={newReview.name}

@@ -35,7 +35,7 @@ export default function Home(props) {
 
             
                 <div className='bodytitle'>
-                <h1>ALL RESTAURANTS</h1>
+                <h1 className='maintitle'>ALL RESTAURANTS</h1>
                 </div>
                 
 
