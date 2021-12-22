@@ -33,14 +33,15 @@ export default function PlaceDetails() {
 
   return selectedPlace ? (
     <div>
-      <section className='Calendar'>
+      <section className='calendar'>
         <Booking />
-        </section>
-
-       <div className='imagetitle'>  
+        <div className='imagetitle'>  
         <h1>{selectedPlace.name}</h1>
         <img src={selectedPlace.url} />
         </div>   
+        </section>
+
+      
       
       <section className="place-info">
         <p>{selectedPlace.michelin_awardWinning}</p>
