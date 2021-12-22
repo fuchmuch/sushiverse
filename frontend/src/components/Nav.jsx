@@ -21,7 +21,7 @@ function Nav() {
 
       <Link to="/Login">
      <button className="navbutton" type="button">
-         Sign Up
+         Login
      </button>
  </Link>
  
