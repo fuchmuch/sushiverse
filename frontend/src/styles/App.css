@@ -1,7 +1,7 @@
   h1{
     color: #000000;
     margin: 0;
-    text-align: end;
+    text-align: center;
     font-weight: bold;
     font-size: 30px;
     align-items: baseline;
@@ -14,12 +14,15 @@
 
 
   h1.reviewtitle {
+    display:flex;
     align-items: flex-end;
     justify-content: flex-start;
     float: left;
+    
 }
 
 h1.maintitle{
+  display: flex;
   text-align: center;
 }
 
