@@ -4,6 +4,7 @@ import SubmitReview from '../components/SubmitReview';
 import { useParams } from 'react-router-dom';
 import ReviewCard from '../components/List/ReviewCard';
 import Booking from '../components/Booking'
+import googleMapReact from 'google-map-react';
 
 
 export default function PlaceDetails() {
@@ -41,16 +42,14 @@ export default function PlaceDetails() {
         </div>   
         </section>
 
-      
-      
       <section className="place-info">
-      
         <p>{selectedPlace.michelin_awardWinning}</p>
         <p>{selectedPlace.price}</p>
         <p>{selectedPlace.address}</p>
         <p>{selectedPlace.description}</p>
-      
       </section>
+
+      <googleMap />
       
       <SubmitReview getReviews={getReviews}  id={id} />
       {console.log(reviews,'reviews')}
