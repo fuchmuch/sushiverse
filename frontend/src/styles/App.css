@@ -1,3 +1,21 @@
+  h1{
+    color: #000000;
+    margin: 0;
+    text-align: end;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: baseline;
+  }
+
+  h1.reviewtitle {
+    align-items: flex-end;
+    justify-content: flex-start;
+    float: left;
+}
+
+
+
+
 img {
   height: 300 px;
   width: 450px;
@@ -46,7 +64,8 @@ p {
 }
 
 .calendar {
-  float: left;
+ 
+  padding-top: 100px;
 }
 
 .reviewSection {
