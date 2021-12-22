@@ -21,9 +21,16 @@
     
 }
 
+h1.eachnameplace{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 h1.maintitle{
   display: flex;
-  text-align: center;
+  justify-content: center;
+  /* text-align: center; */
 }
 
 form.submitform {
@@ -66,7 +73,7 @@ form.searchBar {
   justify-content: right;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+ 
 }
 
 p {
