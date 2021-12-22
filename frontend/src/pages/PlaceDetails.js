@@ -34,14 +34,14 @@ export default function PlaceDetails() {
     <div>
       <section className='Calendar'>
         <Booking />
-   <div>  
+        </section>
+
+       <div className='imagetitle'>  
         <h1>{selectedPlace.name}</h1>
         <img src={selectedPlace.url} />
         </div>   
-      </section>
+      
       <section className="place-info">
-        
-        
         <p>{selectedPlace.michelin_awardWinning}</p>
         <p>{selectedPlace.price}</p>
         <p>{selectedPlace.address}</p>
