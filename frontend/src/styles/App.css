@@ -78,8 +78,7 @@ form.searchBar {
 
 p {
   display:flex;
- 
-  float: right;
+ justify-content: flex-end;
 }
 
 .rev-card{

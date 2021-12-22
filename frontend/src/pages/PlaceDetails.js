@@ -44,10 +44,12 @@ export default function PlaceDetails() {
       
       
       <section className="place-info">
+      
         <p>{selectedPlace.michelin_awardWinning}</p>
         <p>{selectedPlace.price}</p>
         <p>{selectedPlace.address}</p>
         <p>{selectedPlace.description}</p>
+      
       </section>
       
       <SubmitReview getReviews={getReviews}  id={id} />
