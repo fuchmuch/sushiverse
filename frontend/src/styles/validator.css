@@ -31,13 +31,10 @@ button:hover {
   background-color: #718bff;
 }
 
-form {
-  background-color: white;
-  color: #222222;
-  padding: 1.5rem 2rem;
-  text-align: left;
-  justify-content: space-evenly;
-  
+form{
+    background-color: white;
+    color: #222222;
+    justify-content: space-evenly;
 }
 
 

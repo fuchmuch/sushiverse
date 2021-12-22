@@ -5,24 +5,25 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { BiSearch } from "react-icons/bi"
 import Search from './SearchResults';
 import SearchResults from './SearchResults';
+// import './styles/css';
 
 function Nav() {
   return (
 
     <nav className="navbar">
 
-      <BiSearch/>
+      <BiSearch className='searchicon'/>
       <form className='searchBar'>
       <SearchResults/>
     </form>
 
       <Link to="/Login">
-     <button type="button">
+     <button className="navbutton" type="button">
          Sign Up
      </button>
  </Link>
  
-      <MdOutlineAccountCircle size='4rem'/>
+      <MdOutlineAccountCircle className= 'accounticon' size='4rem'/>
         </nav >
 
   );

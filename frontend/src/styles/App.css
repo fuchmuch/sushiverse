@@ -1,10 +1,35 @@
-
 img {
   height: 300 px;
   width: 450px;
   float: right;
- 
+
 }
+
+.searchicon{
+  padding-top: 20px;
+  padding-left: 60px;
+
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+}
+
+
+
+input {
+  flex-direction: row;
+}
+
+form.searchBar {
+  margin-top: -10px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-right: 80rem;
+}
+
 
 .place-info {
   font-size: 20px;
@@ -16,36 +41,32 @@ img {
   align-items: flex-end;
 }
 
-img{
-
-}
-
-p{
+p {
   float: right;
 }
 
-.calendar{
-  float:left;
+.calendar {
+  float: left;
 }
 
-.reviewSection{
+.reviewSection {
   padding-bottom: 100px;
 
 }
 
 
-.bodypart{
+.bodypart {
   color: black;
   text-align: center;
 }
 
 
-.places-Section{
- display: flex;
- flex-flow: row wrap;
- align-items: center;
- justify-content: top;
- padding-left: 180px;
+.places-Section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: top;
+  padding-left: 180px;
 }
 
 .navbar {
@@ -70,6 +91,7 @@ p{
   display: inline-block;
   font-size: 20px;
 }
+
 .button:hover {
   background-color: darkslateblue;
   text-shadow: 1px 1px 2px white;
