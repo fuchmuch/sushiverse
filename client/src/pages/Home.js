@@ -31,8 +31,7 @@ export default function Home(props) {
 
     return (
       <div className='bodypart'>
-            {/* {isLoggedIn ?  */}
-
+          
             
                 <div className='bodytitle'>
                 <h1 className='maintitle'>ALL RESTAURANTS</h1>
@@ -67,8 +66,7 @@ export default function Home(props) {
                     })}
                 </section>
                 </div>
-    //         : <Validator/> 
-    // } 
+    
        
     )
 
