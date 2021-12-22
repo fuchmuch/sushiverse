@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
 
+
 function SubmitReview(props) {
     const [newReview, setNewReview] = useState({
         name:``,
@@ -8,30 +9,40 @@ function SubmitReview(props) {
         ratings:``,
         place: props.id
     })
-    const submit = (e) => {
+
+    console.log(props)
+    const submit = async(e) =>{
+        
         e.preventDefault();
-        axios.post(`http://localhost:3001/api/reviews`, {
+        const result = await axios.post(`http://localhost:3001/api/reviews`, {
             name: newReview.name,
             comments: newReview.comments,
             ratings: newReview.ratings,
-            place: newReview.id
-        })
+            place: newReview.place
+        }) 
+       
+       props.getReviews();   
+
+
         let anotherReview = {
             name:``,
             comments:``,
-            ratings:``
+            ratings:``,
         }
         setNewReview(anotherReview)
     }
+
     const handle = (e) => {
         const newestReview = { ...newReview }
         newestReview[e.target.id] = e.target.value
         setNewReview(newestReview)
-        console.log(newestReview)
     }
     
     return (
         <div className = "reviewSection">
+<div>
+    
+</div>
             <h1>Review</h1>
             <form onSubmit={(e) => submit(e)}>
                 Name: <input type='text'
@@ -61,3 +72,6 @@ function SubmitReview(props) {
     );
 }
 export default SubmitReview;
+
+
+

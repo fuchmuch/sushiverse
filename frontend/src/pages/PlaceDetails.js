@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import ReviewCard from '../components/List/ReviewCard';
 import Booking from '../components/Booking'
 
-export default function PlaceDetails(props) {
+export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
 
@@ -34,24 +34,33 @@ export default function PlaceDetails(props) {
     <div>
       <section className='Calendar'>
         <Booking />
-      </section>
-      <section className="place-info">
+   <div>  
         <h1>{selectedPlace.name}</h1>
         <img src={selectedPlace.url} />
+        </div>   
+      </section>
+      <section className="place-info">
+        
+        
         <p>{selectedPlace.michelin_awardWinning}</p>
         <p>{selectedPlace.price}</p>
         <p>{selectedPlace.address}</p>
         <p>{selectedPlace.description}</p>
       </section>
       
-      <SubmitReview {...props} id={id} />
+      <SubmitReview getReviews={getReviews}  id={id} />
+      {console.log(reviews,'reviews')}
       {reviews.map((review) => {
-        if (review.id === id) {
+       const {place} = review;
+        if (place?._id === id) {
+
+          console.log('inside if')
           return (
             <ReviewCard
               name={review.name}
               comments={review.comments}
               ratings={review.ratings}
+              place={review.place._id}
             />
           );
         } else {

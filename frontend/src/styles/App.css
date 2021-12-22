@@ -5,14 +5,19 @@ img {
  
 }
 
-.place-info img, p{
-  display: flex;
-  flex-flow: row wrap;
+.place-info {
   font-size: 20px;
   font-family: 'Open Sans';
   padding-right: 50px;
-  float: center;
  justify-content:left;
+}
+
+img{
+float: right;
+}
+
+p{
+  float: right;
 }
 
 .calendar{
