@@ -173,3 +173,30 @@ p.p4{
   background-color: darkslateblue;
   text-shadow: 1px 1px 2px white;
 }
+
+.about img{
+  width: 10vh;
+  height: 10vh;
+}
+
+.about{
+  padding: 8vh;
+  font-size: 5vh;
+}
+
+.links a{
+  text-decoration: none;
+  color: darkgray;
+  padding: 5vh;
+}
+
+.about img{
+  width: 10vh;
+  height: 10vh;
+}
+
+.my-about{
+  background-color: white;
+  color: darkgray;
+  border-radius: 2vh;
+}

@@ -36,7 +36,7 @@ export default function PlaceDetails() {
     const res = await axios.delete(`http://localhost:3001/api/reviews/details/${reviewId}`);
     deleteReviews(res.data.reviews)
   };
-//create a state deletereview populate /update how it works 
+
 
   useEffect(() => {
     getPlace();

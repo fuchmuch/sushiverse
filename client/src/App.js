@@ -8,6 +8,7 @@ import PlaceCard from './components/List/PlaceCard';
 import Validator from './components/Validator';
 import SubmitReview from './components/SubmitReview';
 import LocationCard from './components/List/LocationCard';
+import About from './components/About';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             component={() => <Home />}
           />
         <Route
-            path="./nav"
+            path="/nav"
             component={() => <Nav />}
           />
 
