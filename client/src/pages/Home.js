@@ -11,28 +11,27 @@ export default function Home(props) {
     const [places, setPlaces] = useState([]);
     const [locations, setLocations] = useState([]);
     const [isLoggedIn, setLoggedIn] = useState(false);
-    const [searchResults, setSearchResults] = useState([])
-    const [searched, toggleSearched] = useState(false)
-    
+    // const [searchResults, setSearchResults] = useState([])
+    // const [searched, toggleSearched] = useState(false)
+    // const [searchQuery, setSearchQuery] = useState('')
 
     useEffect(() => {
         getPlaces();
         getLocations();
-        searchResults();
     }, []);
-
-    const getSearchResults = async (event) => {
-        event.preventDefault()
-        const res= await axios.get(
-          `http://localhost:3001/api/places/${id}`
-        )
-        setSearchResults(response.data.results)
-        // setSearchQuery('')
-        toggleSearched(true)
-      }
-      const handleChange = (event) => {
-        setSearchResults(event.target.value)
-      }
+//function referring id
+    // const getSearchResults = async (event) => {
+    //    event.preventDefault()
+    //     const res= await axios.get(
+    //       `http://localhost:3001/api/places/${id}`
+    //     )
+    //     setSearchResults(response.data.results)
+    //     setSearchQuery('')
+    //     toggleSearched(true)
+    //   }
+    //   const handleChange = (event) => {
+    //     setSearchQuery(event.target.value)
+    //   }
 
 
     const getPlaces = async () => {
@@ -49,10 +48,11 @@ export default function Home(props) {
 
     return (
       <div className='bodypart'>
-          
-              <div className="search">
+
+              {/* <div className="search">
         <SearchResults
-          onChange={handleChange}
+            value={searchQuery}
+            onChange={handleChange}
           onSubmit={getSearchResults}
         />
         {searched ? (
@@ -65,12 +65,11 @@ export default function Home(props) {
                    name={place.name}
                    image={place.url}
                />
-                
               ))}
             </section>
           </div>
         ) : null}
-      </div>
+      </div> */}
             
                 <div className='bodytitle'>
                 <h1 className='maintitle'>ALL RESTAURANTS</h1>

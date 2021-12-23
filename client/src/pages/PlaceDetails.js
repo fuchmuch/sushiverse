@@ -37,7 +37,7 @@ export default function PlaceDetails() {
   useEffect(() => {
     getPlace();
     getReviews();
-    // deleteReviews();
+   
   }, []);
 
   return selectedPlace ? (
@@ -51,14 +51,14 @@ export default function PlaceDetails() {
         </section>
 
       <section className="place-info">
-        <p>{selectedPlace.michelin_awardWinning}</p>
-        <p>{selectedPlace.price}</p>
-        <p>{selectedPlace.address}</p>
-        <p>{selectedPlace.description}</p>
+        <div className= 'pcontainer'>
+        <p className='p1'>{selectedPlace.michelin_awardWinning}</p>
+        <p className='p2'>{selectedPlace.price}</p>
+        <p className='p3'>{selectedPlace.address}</p>
+        <p className='p4'>{selectedPlace.description}</p>
+        </div>
       </section>
-
-      <googleMap />
-      
+     
       <SubmitReview getReviews={getReviews}  id={id} />
       {console.log(reviews,'reviews')}
       {reviews.map((review) => {

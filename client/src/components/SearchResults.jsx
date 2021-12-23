@@ -4,7 +4,7 @@ const SearchResults= (props) => {
 
     
     return (
-        <form onSubmit={props.onSubmit}>
+        <form className='searchform' onSubmit={props.onSubmit}>
           <input
             type="text"
             name="Search"
@@ -18,4 +18,4 @@ const SearchResults= (props) => {
     
 }
 
-export default SearchResults
+export default SearchResults;

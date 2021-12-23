@@ -80,9 +80,27 @@ form.searchBar {
  
 }
 
+.pcontainer{
+  width: 300px;
+    border: 1px solid gray;
+    padding: 50px;
+    margin: 20px;
+    float: right;
+}
+
+
 p {
   display:flex;
  justify-content: flex-end;
+ font-weight:bolder;
+}
+
+p.p2{
+  font-size: 30px;
+}
+
+p.p4{
+  font-size: 15px;
 }
 
 .rev-card{
