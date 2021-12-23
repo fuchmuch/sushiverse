@@ -6,14 +6,14 @@ import ReviewCard from '../components/List/ReviewCard';
 import Booking from '../components/Booking'
 // import googleMapReact from 'google-map-react';
 import {FaInstagram} from 'react-icons/fa';
+// import { Rating } from 'react-simple-star-rating';
 
 
 export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
 
-
-
+  
   let { id } = useParams()
   console.log(id);
 
@@ -41,6 +41,8 @@ export default function PlaceDetails() {
     getReviews();
     // deleteReviews();
   }, []);
+
+  
 
   return selectedPlace ? (
     <div>

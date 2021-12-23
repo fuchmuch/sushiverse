@@ -18,10 +18,9 @@
 }
 
   h1.reviewtitle {
-    display:flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    display: flex;
     float: left;
+    margin: 1em;
     
 }
 
@@ -40,13 +39,16 @@ h1.maintitle{
 form.submitform {
   align-items: flex-end;
   padding-top: 200px;
-  border: 1px solid rgb(161, 160, 159);
+  border: 3px solid rgb(161, 160, 159);
+  border-radius: 1em;
+  margin: 1em;
 }
 
 img {
   height: 300 px;
   width: 450px;
   float: right;
+  /* margin: 1em; */
 
 }
 
@@ -82,10 +84,11 @@ form.searchBar {
 
 .pcontainer{
   width: 300px;
-    border: 1px solid gray;
-    padding: 50px;
-    margin: 20px;
-    float: right;
+  border: 1px solid gray;
+  padding: 68px;
+  margin: 0em 67em;
+  justify-content: flex-end;
+  display: flow-root;
 }
 
 
@@ -97,10 +100,15 @@ p {
 
 p.p2{
   font-size: 30px;
+  justify-content: center;
 }
 
+p.p3{
+  justify-content: center;
+}
 p.p4{
   font-size: 15px;
+  justify-content: center;
 }
 
 .rev-card{
