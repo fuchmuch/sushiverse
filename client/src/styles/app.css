@@ -12,6 +12,10 @@
   margin-top: 8px;
 }
 
+.deletebtn{
+  display: flex;
+  justify-content: center;
+}
 
   h1.reviewtitle {
     display:flex;

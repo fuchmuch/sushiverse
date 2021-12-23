@@ -4,18 +4,36 @@ import Locationcard from '../components/List/LocationCard'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import Validator from '../components/Validator';
+import SearchResults from '../components/SearchResults';
 
 export default function Home(props) {
     let history = useHistory();
     const [places, setPlaces] = useState([]);
     const [locations, setLocations] = useState([]);
     const [isLoggedIn, setLoggedIn] = useState(false);
-
+    const [searchResults, setSearchResults] = useState([])
+    const [searched, toggleSearched] = useState(false)
+    
 
     useEffect(() => {
         getPlaces();
         getLocations();
+        searchResults();
     }, []);
+
+    const getSearchResults = async (event) => {
+        event.preventDefault()
+        const res= await axios.get(
+          `http://localhost:3001/api/places/${id}`
+        )
+        setSearchResults(response.data.results)
+        // setSearchQuery('')
+        toggleSearched(true)
+      }
+      const handleChange = (event) => {
+        setSearchResults(event.target.value)
+      }
+
 
     const getPlaces = async () => {
         const res = await axios.get(`http://localhost:3001/api/places`);
@@ -32,13 +50,34 @@ export default function Home(props) {
     return (
       <div className='bodypart'>
           
+              <div className="search">
+        <SearchResults
+          onChange={handleChange}
+          onSubmit={getSearchResults}
+        />
+        {searched ? (
+          <div>
+            <h1>Search Results</h1>
+            <section className="search-results container-grid">
+              {searchResults.map((result) => (
+                   <PlaceCard
+                   onClick={() => history.push(`/places/details/${place._id}`)}
+                   name={place.name}
+                   image={place.url}
+               />
+                
+              ))}
+            </section>
+          </div>
+        ) : null}
+      </div>
             
                 <div className='bodytitle'>
                 <h1 className='maintitle'>ALL RESTAURANTS</h1>
                 </div>
                 
 
-                {/* <section className="locations-Section">
+                {/* <section className="locationspt">
       {locations.map((location) => {
           {
             return (

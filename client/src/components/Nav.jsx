@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Validator from '../components/Validator';
+import Validator from './Validator';
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { BiSearch } from "react-icons/bi"
 import Search from './SearchResults';

@@ -10,6 +10,7 @@ import googleMapReact from 'google-map-react';
 export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
+  // const [reduceReviews, setReduceReviews] = useState([]);
 
   let { id } = useParams()
   console.log(id);
@@ -27,9 +28,16 @@ export default function PlaceDetails() {
     setReviews(res.data.reviews);
   };
 
+  // const reduceReviews = async () => {
+  //   const res = await axios.delete(`http://localhost:3001/api/reviews/details/${id}`);
+  //   setReduceReviews(res.data.reviews);
+  // };
+
+
   useEffect(() => {
     getPlace();
     getReviews();
+    // deleteReviews();
   }, []);
 
   return selectedPlace ? (
@@ -57,13 +65,13 @@ export default function PlaceDetails() {
        const {place} = review;
         if (place?._id === id) {
 
-          console.log('inside if')
+          console.log('sucess')
           return (
             <ReviewCard
               name={review.name}
               comments={review.comments}
               ratings={review.ratings}
-              place={review.place._id}
+              place={review.place._id} 
             />
           );
         } else {

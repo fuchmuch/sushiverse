@@ -27,11 +27,12 @@ function App() {
             component={() => <Home />}
           />
 
-          
+
           <Route
             path="/places/details/:id"
             component={() => <PlaceDetails />}
           />
+          
 
         </Switch>
       </main>

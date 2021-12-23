@@ -8,7 +8,7 @@ export default function ReviewCard(props) {
         <h1>{props.name}</h1>
         <h2>{props.ratings}</h2>
         <p>{props.comments}</p>
-
+      <button className='deletebtn'>Delete</button>
       </section>
     </div>
   )
