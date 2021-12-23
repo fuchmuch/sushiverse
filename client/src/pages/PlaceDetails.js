@@ -6,6 +6,7 @@ import ReviewCard from '../components/List/ReviewCard';
 import Booking from '../components/Booking'
 // import googleMapReact from 'google-map-react';
 import {FaInstagram} from 'react-icons/fa';
+
 // import { Rating } from 'react-simple-star-rating';
 
 
@@ -30,16 +31,16 @@ export default function PlaceDetails() {
     setReviews(res.data.reviews);
   };
 
-  // const deleteReviews = async () => {
-  //   const res = await axios.delete(`http://localhost:3001/api/reviews/${id}`);
-  //   setDeleteReviews(res.data.reviews);
-  // };
+  const deleteReviews = async (reviewId) => {
+    console.log(`this is line 35 ${reviewId}`);
+    const res = await axios.delete(`http://localhost:3001/api/reviews/details/${reviewId}`);
 
+  };
+//create a state deletereview populate /update how it works 
 
   useEffect(() => {
     getPlace();
     getReviews();
-    // deleteReviews();
   }, []);
 
   
@@ -63,7 +64,7 @@ export default function PlaceDetails() {
         <FaInstagram />
         </div>
       </section>
-     
+    
       <SubmitReview getReviews={getReviews}  id={id} />
       {console.log(reviews,'reviews')}
       {reviews.map((review) => {
@@ -73,11 +74,12 @@ export default function PlaceDetails() {
           console.log('sucess')
           return (
       
-            <ReviewCard 
-              name={review.name}
-              comments={review.comments}
-              ratings={review.ratings}
-              place={review.place._id} 
+            <ReviewCard deleteReviews={deleteReviews}
+            review={review}
+              // name={review.name}
+              // comments={review.comments}
+              // ratings={review.ratings}
+              // place={review.place._id} 
             />
             
           );

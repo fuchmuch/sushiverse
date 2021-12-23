@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"
 
 
+
+
 function SubmitReview(props) {
     const [newReview, setNewReview] = useState({
         name:``,
@@ -9,6 +11,7 @@ function SubmitReview(props) {
         ratings:``,
         place: props.id
     })
+
 
     console.log(props)
     const submit = async(e) =>{

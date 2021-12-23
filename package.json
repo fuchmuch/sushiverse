@@ -19,6 +19,7 @@
     "mongoose": "^6.1.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
+    "react-google-autocomplete": "^2.6.1",
     "react-simple-star-rating": "^4.0.5"
   }
 }
