@@ -6,6 +6,7 @@ import { BiSearch } from "react-icons/bi"
 import Search from './SearchResults';
 import SearchResults from './SearchResults';
 // import './styles/css';
+import About from './About';
 
 
 
@@ -19,6 +20,13 @@ function Nav() {
       <SearchResults/>
     </form>
 
+    <Link to="/About">
+     <button className="navbutton" type="button">
+         About
+     </button>
+    </Link>  
+
+
       <Link to="/Login">
      <button className="navbutton" type="button">
          Login
@@ -28,7 +36,9 @@ function Nav() {
       <Link to="/Home">
       <MdOutlineAccountCircle className= 'accounticon' size='4rem'/>
       </Link>
+
         </nav >
+     
 
   );
 }

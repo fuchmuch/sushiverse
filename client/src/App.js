@@ -25,7 +25,10 @@ function App() {
             path="/home"
             component={() => <Home />}
           />
-
+        <Route
+            path="./nav"
+            component={() => <Nav />}
+          />
 
           <Route
             path="/places/details/:id"
