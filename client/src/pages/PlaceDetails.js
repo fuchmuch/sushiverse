@@ -4,13 +4,15 @@ import SubmitReview from '../components/SubmitReview';
 import { useParams } from 'react-router-dom';
 import ReviewCard from '../components/List/ReviewCard';
 import Booking from '../components/Booking'
-import googleMapReact from 'google-map-react';
+// import googleMapReact from 'google-map-react';
+import {FaInstagram} from 'react-icons/fa';
 
 
 export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
-  // const [reduceReviews, setReduceReviews] = useState([]);
+
+
 
   let { id } = useParams()
   console.log(id);
@@ -28,16 +30,16 @@ export default function PlaceDetails() {
     setReviews(res.data.reviews);
   };
 
-  // const reduceReviews = async () => {
-  //   const res = await axios.delete(`http://localhost:3001/api/reviews/details/${id}`);
-  //   setReduceReviews(res.data.reviews);
+  // const deleteReviews = async () => {
+  //   const res = await axios.delete(`http://localhost:3001/api/reviews/${id}`);
+  //   setDeleteReviews(res.data.reviews);
   // };
 
 
   useEffect(() => {
     getPlace();
     getReviews();
-   
+    // deleteReviews();
   }, []);
 
   return selectedPlace ? (
@@ -56,6 +58,7 @@ export default function PlaceDetails() {
         <p className='p2'>{selectedPlace.price}</p>
         <p className='p3'>{selectedPlace.address}</p>
         <p className='p4'>{selectedPlace.description}</p>
+        <FaInstagram />
         </div>
       </section>
      
@@ -67,12 +70,14 @@ export default function PlaceDetails() {
 
           console.log('sucess')
           return (
-            <ReviewCard
+      
+            <ReviewCard 
               name={review.name}
               comments={review.comments}
               ratings={review.ratings}
               place={review.place._id} 
             />
+            
           );
         } else {
           console.log('review doesnt match this place');

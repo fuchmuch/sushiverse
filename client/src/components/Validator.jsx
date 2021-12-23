@@ -48,7 +48,7 @@ const handleChange= (e) => {
 
   return (
     <div className="form">
-      <h1>Sign Up</h1>
+      <h1 className='logintitle'>Sign Up</h1>
       <div className="login_logo">
       <img src= {"https://i.imgur.com/61gAr4u.jpg"} alt="logo"/> 
       </div>

@@ -18,5 +18,8 @@ onChildClick={''}
 </div>
 );
 }
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkNLe561dEWasSgEZxeltEnhnJty3l3T0&callback=initMap">
+</script>
 
 export default Map;
