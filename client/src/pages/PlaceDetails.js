@@ -13,7 +13,7 @@ import {FaInstagram} from 'react-icons/fa';
 export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
-
+  
   
   let { id } = useParams()
   console.log(id);
@@ -34,7 +34,7 @@ export default function PlaceDetails() {
   const deleteReviews = async (reviewId) => {
     console.log(`this is line 35 ${reviewId}`);
     const res = await axios.delete(`http://localhost:3001/api/reviews/details/${reviewId}`);
-
+    deleteReviews(res.data.reviews)
   };
 //create a state deletereview populate /update how it works 
 

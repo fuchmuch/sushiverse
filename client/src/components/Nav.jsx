@@ -24,8 +24,10 @@ function Nav() {
          Login
      </button>
  </Link>
- 
+
+      <Link to="/Home">
       <MdOutlineAccountCircle className= 'accounticon' size='4rem'/>
+      </Link>
         </nav >
 
   );
