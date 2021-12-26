@@ -55,32 +55,32 @@ const handleChange= (e) => {
       <h3>Please create an account to continue.</h3>
       <h4>Let’s get some basic information so that restaurants know who you are.</h4> 
       <form>
-      <input type="text" 
+      <input type="text" required
         placeholder="Email Address" 
         id= "email" 
         onChange = {handleChange}/>
         <label htmlFor="email">Email Address</label>
 
-        <input type="text" 
+        <input type="text" required
         placeholder="Username" 
         id="username" 
         onChange = {handleChange}/>
         <label htmlFor="username">Username</label>
 
-        <input type="password" 
+        <input type="password" required
         placeholder="Password" 
         id="password" 
         onChange = {handleChange}/>
         <label htmlFor="password">Password</label>
 
         <input
-          type="password"
+          type="password" required
           placeholder="Confirm password"
           id="passwordConfirm"
           onChange = {handleChange}/>
         <label htmlFor="passwordConfirm">Confirm password</label>
 
-        <button type="submit" onClick ={passwordCheck}  >Sign Up</button>
+        <button type="submit" required onClick ={passwordCheck}  >Sign Up</button>
         <p className = {valid ? 'valid' : 'invalid' }>Email address or passwords must match.</p>
 
       </form>

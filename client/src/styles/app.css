@@ -10,11 +10,14 @@
 .navbutton{
   padding-top: 20px;
   margin-top: 8px;
+  transform: scale(1);
 }
 
 .deletebtn{
   display: flex;
   justify-content: center;
+  transform: scale(0.8);
+  margin:20px;
 }
 
   h1.reviewtitle {

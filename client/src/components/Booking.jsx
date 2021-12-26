@@ -9,7 +9,10 @@ const [date, setDate] = useState(new Date());
 
  return (
 <div className='Calendar'>
-    
+    <form>
+    <label for="input1">Enter a date:</label>
+    <input id="pickdate" type="date" name="date" value="Submit"/>
+    </form>
 <div className='calendar-container'>
         <Calendar
           onChange={setDate}
