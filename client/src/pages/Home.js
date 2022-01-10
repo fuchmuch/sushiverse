@@ -93,9 +93,10 @@ export default function Home(props) {
                 <section className="places-Section">
                     {places.map((place) => {
                         {
+                          let name = place.name.split(" ").join('-').toLowerCase()
                             return (
                                 <PlaceCard
-                                    onClick={() => history.push(`/places/details/${place._id}`)}
+                                    onClick={() => history.push(`/places/details/${name}`)}
                                     name={place.name}
                                     image={place.url}
                                 />

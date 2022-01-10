@@ -13,13 +13,33 @@ import {FaInstagram} from 'react-icons/fa';
 export default function PlaceDetails() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [reviews, setReviews] = useState([]);
+  const [places, setPlaces] = useState([]);
+  const [id, setId]= useState('')
+
   
-  
-  let { id } = useParams()
-  console.log(id);
+  let { name } = useParams()
+  console.log({id ,name,places,selectedPlace, reviews});
+
+
+  const getId = (places) =>{
+  for (let i = 0; i < places.length; i++) {
+    const p = places[i];
+  let convertedName = p.name.split(" ").join('-').toLowerCase()
+    if (name ===convertedName){
+      console.log('sucsess')
+      setId(p._id)      
+    }
+  }
+  }
+  const getPlaces = async () => {
+    const res = await axios.get(`http://localhost:3001/api/places`);
+    setPlaces(res.data.places);
+    getId(res.data.places)
+  };
+
 
   const getPlace = async () => {
-    console.log('this is get place function')
+    console.log('this is get place function>>>>',id)
     const res = await axios.get(
       `http://localhost:3001/api/places/${id}`
     );
@@ -37,14 +57,17 @@ export default function PlaceDetails() {
     deleteReviews(res.data.reviews)
   };
 
+  useEffect(() => {
+    getPlaces();
+    getReviews();
+    return () => {}
+  }, [])
 
   useEffect(() => {
-    getPlace();
-    getReviews();
-  }, []);
-
+    if(id) getPlace()
+    return () => {}
+  }, [id])
   
-
   return selectedPlace ? (
     <div>
       <section className='calendar'>
@@ -69,11 +92,11 @@ export default function PlaceDetails() {
       {console.log(reviews,'reviews')}
       {reviews.map((review) => {
        const {place} = review;
-        if (place?._id === id) {
+       console.log({name});
+        if (place?._name === name) {
 
           console.log('sucess')
           return (
-      
             <ReviewCard deleteReviews={deleteReviews}
             review={review}
               // name={review.name}
@@ -83,8 +106,6 @@ export default function PlaceDetails() {
             />
             
           );
-        } else {
-          console.log('review doesnt match this place');
         }
       })}
     </div>

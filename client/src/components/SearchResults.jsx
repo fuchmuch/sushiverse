@@ -2,9 +2,8 @@ import React from 'react';
 
 const SearchResults= (props) => {
 
-    
     return (
-        <form className='searchform' onSubmit={props.onSubmit}>
+        <div className='searchdiv'>
           <input
             type="text"
             name="Search"
@@ -13,7 +12,7 @@ const SearchResults= (props) => {
             onChange={props.onChange}
           ></input>
           <button className='searchbtn' type="submit">Search</button>
-        </form>
+        </div>
       )
     
 }

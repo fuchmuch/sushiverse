@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import Validator from './Validator';
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { BiSearch } from "react-icons/bi"
@@ -11,13 +11,27 @@ import About from './About';
 
 
 function Nav() {
+  const [inputValue, setInputValue] = React.useState('')
+  let history = useHistory()
+  console.log(inputValue,'<InputValue')
+
+  const onSubmit = (e) =>{
+    e.preventDefault();
+    const convertedName = inputValue.split(" ").join('-').toLowerCase()
+    // SuShi NoZ -> sushi-noz
+    history.push(`/places/details/${convertedName}`);
+  }
   return (
 
     <nav className="navbar">
-
       <BiSearch className='searchicon'/>
-      <form className='searchBar'>
-      <SearchResults/>
+      <form className='searchBar' onSubmit={onSubmit}>
+      <SearchResults
+      onChange={ (e) => {
+        setInputValue(e.target.value)}
+      }
+      value={inputValue}
+       />
     </form>
 
     <Link to="/About">

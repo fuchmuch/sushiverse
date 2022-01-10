@@ -32,7 +32,7 @@ function App() {
           />
 
           <Route
-            path="/places/details/:id"
+            path="/places/details/:name"
             component={() => <PlaceDetails />}
           />
           
